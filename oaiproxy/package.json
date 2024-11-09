@@ -1,0 +1,16 @@
+{
+  "name": "oai-query-proxy",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "declan",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@azure/core-auth": "^1.9.0",
+    "eslint": "^9.14.0",
+    "openai": "^4.71.1"
+  }
+}
