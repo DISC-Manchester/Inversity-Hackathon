@@ -1,0 +1,31 @@
+name: lint
+
+on:
+  pull_request:
+    paths:
+      - 'oaiproxy/**/*.js'
+
+permissions:
+  checks: write
+  contents: write
+
+jobs:
+  run_linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Give me node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+
+      - name: Give me the cheese
+        run: npm ci
+
+      - name: Use linters
+        uses: wearerequired/lint-action@v2
+        with:
+          eslint: true
